@@ -67,7 +67,7 @@ class GoogleLoginView(APIView):
         token = request.data.get('token')
         try:
             # Verify the token with Google
-            idinfo = id_token.verify_oauth2_token(token, requests.Request(), os.getenv("CLIENT_ID"))
+            idinfo = id_token.verify_oauth2_token(token, requests.Request(), "596990711165-q3h6s4u8un2nmt1ppobcmemql7kgshhk.apps.googleusercontent.com")
 
             # Get the user's Google info
             google_id = idinfo['sub']
